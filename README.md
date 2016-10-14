@@ -43,6 +43,10 @@ You can also speedup the download if you have bandwidth using more parallel work
 
 `:~# s3-pit-restore -b my-bucket -d my-restored-subfolder -p mysubfolder -t "06-17-2016 23:59:50 +2" --max-workers 100`
 
+If want to restore a well definided time stamp, you can use a starting and ending timestamp (a month in this example):
+
+`:~# s3-pit-restore -b my-bucket -d my-restored-subfolder -p mysubfolder -f "05-01-2016 00:00:00 +2" -t "06-01-2016 00:00:00 +2"`
+
 ## Testing
 
 s3-pit-restore comes with a testing suite. You can run it with:
