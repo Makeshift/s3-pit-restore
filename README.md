@@ -39,6 +39,10 @@ Another thing it can do is to restore a subfolder (*prefix*) of a bucket:
 
 `:~# s3-pit-restore -b my-bucket -d my-restored-subfolder -p mysubfolder -t "06-17-2016 23:59:50 +2"`
 
+You can also speedup the download if you have bandwidth using more parallel workers:
+
+`:~# s3-pit-restore -b my-bucket -d my-restored-subfolder -p mysubfolder -t "06-17-2016 23:59:50 +2" --max-workers 100`
+
 ## Testing
 
 s3-pit-restore comes with a testing suite. You can run it with:
