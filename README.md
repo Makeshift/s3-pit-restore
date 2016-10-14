@@ -29,6 +29,16 @@ or clone the repository and launch:
 
 `:~# python3 setup.py install`
 
+## Howto
+
+`s3-pit-restore` can do a lot of interesting things. The base one is restoring an entire bucket to a previous state:
+
+`:~# s3-pit-restore -b my-bucket -d my-restored-bucket -t "06-17-2016 23:59:50 +2"`
+
+Another thing it can do is to restore a subfolder (*prefix*) of a bucket:
+
+`:~# s3-pit-restore -b my-bucket -d my-restored-subfolder -p mysubfolder -t "06-17-2016 23:59:50 +2"`
+
 ## Testing
 
 s3-pit-restore comes with a testing suite. You can run it with:
